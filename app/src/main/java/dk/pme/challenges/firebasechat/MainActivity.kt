@@ -50,8 +50,7 @@ class MainActivity : AppCompatActivity() {
 
             override fun onChildRemoved(snapshot: DataSnapshot) {
                 val message = snapshot.getValue(Message::class.java)
-                if (message != null) {
-                    arrayAdapter.remove(message.value)}
+                    arrayAdapter.remove(message?.value)
             }
 
 
